@@ -1,7 +1,7 @@
 package by.a1.ui;
 
-import by.a1.user.Users;
 import by.a1.ui.pages.LoginPage;
+import by.a1.user.Users;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

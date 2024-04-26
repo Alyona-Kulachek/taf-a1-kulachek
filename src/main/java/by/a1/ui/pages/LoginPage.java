@@ -3,6 +3,7 @@ package by.a1.ui.pages;
 import by.a1.ui.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     WebDriver driver;
@@ -16,8 +17,8 @@ public class LoginPage {
     private final String LOGIN_PERSONAL_ACCOUNT_SECOND_STEP = "//a[@href='/login']";
     private final String TEXT_LOGIN = "//span[@class='MuiTypography-root MuiTypography-bold-32-24 css-ud862c']";
     private final String LOGIN_WITH_EMAIL = "//span[text()='Email']";
-    private final String EMAIL_INPUT_FIELD = "//input[@id='email-account-input']";
-    private final String PASSWORD_INPUT_FIELD = "//input[@id='password_emailLoginInput']";
+    private final String EMAIL_INPUT_FIELD = "//input[@class='MuiInputBase-input MuiFilledInput-input css-1sx8zkw']";
+    private final String PASSWORD_INPUT_FIELD = "//input[@class='MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd css-m7pft5']";
     private final String LOGIN_BUTTON_WITH_EMAIL_AND_PASSWORD = "//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-6 MuiGrid-grid-xl-6 css-1p40sbt']";
     private final String TEXT_ERROR = "//span[@class='MuiTypography-root MuiTypography-regular-14-12-red css-qlsogc']";
 
@@ -49,12 +50,14 @@ public class LoginPage {
         driver.findElement(By.xpath(LOGIN_WITH_EMAIL)).click();
     }
 
-    public void interEmail(String email) {
-        driver.findElement(By.xpath(EMAIL_INPUT_FIELD));
+    public void interEmail(String email) { //проверить xpath
+        WebElement interEmail = driver.findElement(By.xpath(EMAIL_INPUT_FIELD));
+        interEmail.sendKeys(email);
     }
 
-    public void interPassword(String password) {
-        driver.findElement(By.xpath(PASSWORD_INPUT_FIELD));
+    public void interPassword(String password) { ////проверить xpath
+        WebElement interPassword = driver.findElement(By.xpath(PASSWORD_INPUT_FIELD));
+        interPassword.sendKeys(password);
     }
 
     public void selectLoginButtonWithEmailAndPassword() {
