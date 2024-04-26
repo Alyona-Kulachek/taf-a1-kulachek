@@ -18,6 +18,11 @@ public class HelpAndSupportPage {
     private final String HOW_TO_CONTACT_SUPPORT_BTN = "//div[@class='tiles__item tiles__item--row']";
     private final String TEXT_CONTACT_SUPPORT = "//h1[@class='h2 page-title__value']";
 
+    public void getURL() {
+        driver.get("https://www.a1.by/ru/");
+        driver.findElement(By.xpath("//button[@class='button button--primary button--fixed-width']")).click();
+
+    }
 
     public void selectHelpAndSupportBtn() {
         driver.findElement(By.xpath(HELP_AND_SUPPORT_BTN)).click();

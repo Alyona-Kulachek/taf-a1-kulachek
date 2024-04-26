@@ -19,6 +19,11 @@ public class SearchProductPage {
     private final String FIRST_PRODUCT = "//div[@class='product-listing-item product-listing-search-result observable-element']";
     private final String TEXT_PRODUCT = "//h1[@class='h h--1 pdp-header-heading']";
 
+    public void getURL() {
+        driver.get("https://www.a1.by/ru/");
+        driver.findElement(By.xpath("//button[@class='button button--primary button--fixed-width']")).click();
+    }
+
     public void selectSearchButton() {
         driver.findElement(By.xpath(SEARCH_BUTTON)).click();
     }

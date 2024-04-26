@@ -9,6 +9,7 @@ public class OnlineStoreTest extends BaseTest{
     @Test
     public void testOnlineStore() {
         OnlineStorePage onlineStorePage = new OnlineStorePage();
+        onlineStorePage.getURL();
         onlineStorePage.selectOnlineStoreButton();
         onlineStorePage.selectSmartphoneButton();
         Assertions.assertEquals("Смартфоны", onlineStorePage.getTextSmartphoneField());

@@ -9,6 +9,7 @@ public class LoginTest extends BaseTest{
     @Test
     public void testLoginOpen() {
         LoginPage loginPage = new LoginPage();
+        loginPage.getURL();
         loginPage.selectLoginButton();
         loginPage.selectLoginPersonalAccount();
         loginPage.selectLoginPersonalAccountSecondStep();
@@ -18,6 +19,7 @@ public class LoginTest extends BaseTest{
     @Test
     public void testLoginWithIncorrectData() {
         LoginPage loginPage = new LoginPage();
+        loginPage.getURL();
         loginPage.selectLoginWithEmail();
         loginPage.interEmail(Users.getUser().getEmail());
         loginPage.interPassword(Users.getUser().getPassword());

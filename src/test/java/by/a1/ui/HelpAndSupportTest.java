@@ -9,6 +9,7 @@ public class HelpAndSupportTest extends BaseTest{
     @Test
     public void testHelpAndSupportSection() {
         HelpAndSupportPage helpAndSupportPage = new HelpAndSupportPage();
+        helpAndSupportPage.getURL();
         helpAndSupportPage.selectHelpAndSupportBtn();
         helpAndSupportPage.selectContactSupportBtn();
         helpAndSupportPage.selectHowToContactSupportBtn();

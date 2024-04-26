@@ -21,6 +21,11 @@ public class LoginPage {
     private final String LOGIN_BUTTON_WITH_EMAIL_AND_PASSWORD = "//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-xl-6 MuiGrid-grid-xl-6 css-1p40sbt']";
     private final String TEXT_ERROR = "//span[@class='MuiTypography-root MuiTypography-regular-14-12-red css-qlsogc']";
 
+    public void getURL() {
+        driver.get("https://www.a1.by/ru/");
+        driver.findElement(By.xpath("//button[@class='button button--primary button--fixed-width']")).click();
+    }
+
     public void selectLoginButton() {
         driver.findElement(By.xpath(LOGIN_BUTTON)).click();
     }

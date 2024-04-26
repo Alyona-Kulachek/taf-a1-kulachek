@@ -15,6 +15,11 @@ public class OnlineStorePage {
     private final String SMARTPHONE_BUTTON = "//a[@href='/ru/c/smartphones']";
     private final String TEXT_SMARTPHONE = "//div[@class='row row--full-width row--page-heading']";
 
+    public void getURL() {
+        driver.get("https://www.a1.by/ru/");
+        driver.findElement(By.xpath("//button[@class='button button--primary button--fixed-width']")).click();
+    }
+
     public void selectOnlineStoreButton() {
         driver.findElement(By.xpath(ONLINE_STORE_BUTTON)).click();
     }
