@@ -20,11 +20,11 @@ public class OnlineStorePage {
         driver.findElement(By.xpath("//button[@class='button button--primary button--fixed-width']")).click();
     }
 
-    public void selectOnlineStoreButton() {
+    public void clickOnlineStoreButton() {
         driver.findElement(By.xpath(ONLINE_STORE_BUTTON)).click();
     }
 
-    public void selectSmartphoneButton() {
+    public void clickSmartphoneButton() {
         driver.findElement(By.xpath(SMARTPHONE_BUTTON)).click();
     }
 

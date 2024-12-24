@@ -21,18 +21,17 @@ public class HelpAndSupportPage {
     public void getURL() {
         driver.get("https://www.a1.by/ru/");
         driver.findElement(By.xpath("//button[@class='button button--primary button--fixed-width']")).click();
-
     }
 
-    public void selectHelpAndSupportBtn() {
+    public void clickHelpAndSupportBtn() {
         driver.findElement(By.xpath(HELP_AND_SUPPORT_BTN)).click();
     }
 
-    public void selectContactSupportBtn() {
+    public void clickContactSupportBtn() {
         driver.findElement(By.xpath(CONTACT_SUPPORT_BTN)).click();
     }
 
-    public void selectHowToContactSupportBtn() {
+    public void clickHowToContactSupportBtn() {
         driver.findElement(By.xpath(HOW_TO_CONTACT_SUPPORT_BTN)).click();
     }
 

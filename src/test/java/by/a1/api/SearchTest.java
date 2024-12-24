@@ -37,7 +37,7 @@ public class SearchTest {
         SearchPage searchPage = new SearchPage();
         given().
                 param(searchPage.getHeaderKey(), searchPage.getHeaderValue()).
-                param(searchPage.getHeaderLimit(), searchPage.generateRandomNumber()).
+                param(searchPage.getHeaderLimit(), searchPage.generateNumber()).
         when().
                 get(searchPage.getEndPoint()).
         then().

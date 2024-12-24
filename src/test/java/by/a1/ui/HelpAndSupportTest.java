@@ -10,9 +10,9 @@ public class HelpAndSupportTest extends BaseTest{
     public void testHelpAndSupportSection() {
         HelpAndSupportPage helpAndSupportPage = new HelpAndSupportPage();
         helpAndSupportPage.getURL();
-        helpAndSupportPage.selectHelpAndSupportBtn();
-        helpAndSupportPage.selectContactSupportBtn();
-        helpAndSupportPage.selectHowToContactSupportBtn();
+        helpAndSupportPage.clickHelpAndSupportBtn();
+        helpAndSupportPage.clickContactSupportBtn();
+        helpAndSupportPage.clickHowToContactSupportBtn();
         Assertions.assertEquals("Связаться с тех.поддержкой", helpAndSupportPage.getTextContactSupport());
     }
 }

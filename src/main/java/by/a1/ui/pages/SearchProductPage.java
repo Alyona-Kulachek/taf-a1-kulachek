@@ -14,7 +14,7 @@ public class SearchProductPage {
         this.driver = Driver.getDriver();
     }
 
-    private final String SEARCH_BUTTON = "//div[@class='search backdrop-push header-action']";
+    private final String SEARCH_BTN = "//div[@class='search backdrop-push header-action']";
     private final String SEARCH_INPUT_FIELD = "//input[@class='form-input form-input--with-icon global-search-input ui-autocomplete-input']";
     private final String FIRST_PRODUCT = "//div[@class='product-listing-item product-listing-search-result observable-element']";
     private final String TEXT_PRODUCT = "//h1[@class='h h--1 pdp-header-heading']";
@@ -24,8 +24,8 @@ public class SearchProductPage {
         driver.findElement(By.xpath("//button[@class='button button--primary button--fixed-width']")).click();
     }
 
-    public void selectSearchButton() {
-        driver.findElement(By.xpath(SEARCH_BUTTON)).click();
+    public void clickSearchBtn() {
+        driver.findElement(By.xpath(SEARCH_BTN)).click();
     }
 
     public void searchInput() {
@@ -34,7 +34,7 @@ public class SearchProductPage {
         search.sendKeys("Ноутбук", Keys.ENTER);
     }
 
-    public void selectFirstProduct() {
+    public void clickFirstProduct() {
         driver.findElement(By.xpath(FIRST_PRODUCT)).click();
     }
 

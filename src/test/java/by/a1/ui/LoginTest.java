@@ -10,9 +10,9 @@ public class LoginTest extends BaseTest{
     public void testLoginOpen() {
         LoginPage loginPage = new LoginPage();
         loginPage.getURL();
-        loginPage.selectLoginButton();
-        loginPage.selectLoginPersonalAccount();
-        loginPage.selectLoginPersonalAccountSecondStep();
+        loginPage.clickLoginBtn();
+        loginPage.clickLoginPA();
+        loginPage.clickLoginPASecondStep();
         Assertions.assertEquals("Вход в аккаунт", loginPage.getTextLogin());
     }
 
@@ -20,10 +20,10 @@ public class LoginTest extends BaseTest{
     public void testLoginWithIncorrectData() {
         LoginPage loginPage = new LoginPage();
         loginPage.getURL();
-        loginPage.selectLoginWithEmail();
+        loginPage.clickLoginWithEmail();
         loginPage.interEmail(Users.getUser().getEmail());
         loginPage.interPassword(Users.getUser().getPassword());
-        loginPage.selectLoginButtonWithEmailAndPassword();
+        loginPage.clickLoginBtnEmailPassword();
         Assertions.assertEquals("Ошибка! Пожалуйста, проверьте введенный Email", loginPage.getTextError());
     }
 }

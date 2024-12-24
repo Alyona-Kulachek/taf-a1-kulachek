@@ -10,9 +10,9 @@ public class SearchProductTest extends BaseTest{
     public void testSearchProductAddToFavorite() {
         SearchProductPage searchProductPage = new SearchProductPage();
         searchProductPage.getURL();
-        searchProductPage.selectSearchButton();
+        searchProductPage.clickSearchBtn();
         searchProductPage.searchInput();
-        searchProductPage.selectFirstProduct();
+        searchProductPage.clickFirstProduct();
         Assertions.assertEquals("Ноутбук", searchProductPage.getTextProduct());
     }
 }

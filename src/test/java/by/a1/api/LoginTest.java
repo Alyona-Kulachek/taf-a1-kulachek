@@ -14,7 +14,7 @@ public class LoginTest {
     public void testLogin1() {
         LoginPage loginPage = new LoginPage();
         given().
-                body(loginPage.getBodyWithGenerateEmailAndPassword()).
+                body(loginPage.getBodyWithEmailAndPassword()).
         when().
                 post(loginPage.getEndPoint()).
         then().
@@ -54,7 +54,7 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage();
         given().
                 contentType(loginPage.getContentType()).
-                body(loginPage.getBodyWithGenerateEmail()).
+                body(loginPage.getBodyWithEmail()).
         when().
                 post(loginPage.getEndPoint()).
         then().

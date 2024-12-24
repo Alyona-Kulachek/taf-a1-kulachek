@@ -4,12 +4,12 @@ import by.a1.user.Users;
 
 public class LoginPage {
 
-    private String endPoint = "https://asmp.a1.by/communityrest/checkRegistration/email";
-    private String body = "{\n" +
+    private final String endPoint = "https://asmp.a1.by/communityrest/checkRegistration/email";
+    private final String body = "{\n" +
             "    \"email\": \"test@test.ru\",\n" +
             "    \"realm\": \"email.a1.by\"\n" +
             "}";
-    private String contentType = "application/json";
+    private final String contentType = "application/json";
 
     public String getEndPoint() {
         return endPoint;
@@ -23,25 +23,23 @@ public class LoginPage {
         return body;
     }
 
-    public String generateEmail() {
+    private String generateEmail() {
         return Users.getUser().getEmail();
     }
 
-    public String generatePassword() {
+    private String generatePassword() {
         return Users.getUser().getPassword();
     }
 
-    public String getBodyWithGenerateEmailAndPassword() {
+    public String getBodyWithEmailAndPassword() {
         String email = generateEmail();
         String password = generatePassword();
-        String body = "{email: \"" + email + "\", realm: \"" + password + "\"}";
-        return body;
+        return "{email: \"" + email + "\", realm: \"" + password + "\"}";
     }
 
-    public String getBodyWithGenerateEmail() {
+    public String getBodyWithEmail() {
         String email = generateEmail();
-        String body = "{email: \"" + email + "\", realm: \"email.a1.by\"\"}";
-        return body;
+        return "{email: \"" + email + "\", realm: \"email.a1.by\"\"}";
     }
 
 }

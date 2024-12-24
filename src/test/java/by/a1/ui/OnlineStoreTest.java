@@ -10,8 +10,8 @@ public class OnlineStoreTest extends BaseTest{
     public void testOnlineStore() {
         OnlineStorePage onlineStorePage = new OnlineStorePage();
         onlineStorePage.getURL();
-        onlineStorePage.selectOnlineStoreButton();
-        onlineStorePage.selectSmartphoneButton();
+        onlineStorePage.clickOnlineStoreButton();
+        onlineStorePage.clickSmartphoneButton();
         Assertions.assertEquals("Смартфоны", onlineStorePage.getTextSmartphoneField());
     }
 

@@ -2,15 +2,7 @@ package by.a1.api;
 
 public class OpenPage {
 
-    private String endPointForMethodGet = "https://www.a1.by/ru/";
-    private String contentType ="text/html;charset=UTF-8";
-
-    public String getEndPoint() {
-        return endPointForMethodGet;
-    }
-
-    public String getContentType() {
-        return contentType;
-    }
+    static final String END_POINT = "https://www.a1.by/ru/";
+    static final String CONTENT_TYPE ="text/html;charset=UTF-8";
 
 }
